@@ -1,76 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primeiro teste</title>
-    
 
-</head>
-<body>
+    <!-- 
+        Sempre colocar tuas importações de CSS e JS depois das configurações que não vão sofrer alterações.
+        Nesse caso, movi tuas importações para depois do title e de quaisquer outras que sejam estáticas
+    -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- 
+        Por enquanto teu projeto tem apenas um arquivo de estilos, mas caso tenha que estruturar mais de um,
+        sugiro sempre criar uma pasta "css" para gerenciar teus arquivos do mesmo.
+    -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 
+        Gostei do nome da classe. O nome propõe o que a classe representa "card".
+        Não encontrei refência à classe "card1, card2 e/ou card3" no css. Essas classes não têm sentido semântico,
+        pois imaginemos hipoteticamente que tenhamos 1000 cards. Então teríamos "card1000" para darmos manutenção a 
+        esse monte de classes? O ideal é que tenhamos classes que possam ser reutilizadas ou se for uma classe modificadora,
+        o nome tem que ser condizente. Exemplo card-red, card-blue, card-green, card-yellow ou até mesmo,
+        card-small, card-medium, card-large, card-xlarge, card-xxlarge ou card-disabled, card-enabled, card-active, coisas do tipo.
+      -->
+      <div class="card card1">
+        <!--
+          Você está usando várias nomenclaturas em inglês como "container, card etc", mas est"á usando nomes em português
+          misturados como "./imagens" que poderia ser "./images" em inglês para manter o padrão. Logo abaixo usou um id
+          com nomenclatura "colorido" que poderia ser algo equivalente em inglês.
 
-   <div class="container">
+          Outra coisa importante. nomes de arquivos e diretórios é sempre bom escrever em um padrão único. Você escreveu:
+          "card-pequeno1.jpeg" e no mesmo diretório "Tecnologia.jpeg" tendo padrões caixa baixa e alta. O padrão mais utilizado é
+          caixa baixa com hifens para separar as palavras como fez com "card-pequeno1.jpeg"."
+        -->
+        <img src="./imagens/Tecnologia.jpeg" alt="Tecnologia" />
+        <!-- 
+          "colorido1" não tem um nome intuitivo/semântico. Lembre do exemplo dos cards.
+          A título de informação, esse componente é comumente chamado de "chip ou badge".
+          Consulte nesses links: 
+          * https://www.syncfusion.com/angular-components/angular-chips
+          * https://getbootstrap.com/docs/5.3/components/badge/#background-colors
 
-        
-        <div class=" card card1"> 
-            <img src="./imagens/Tecnologia.jpeg" alt="Tecnologia">
+          Outra coisa importante. Você inverteu a ordem dos headdings h2 e h3. Sempre a hierarquia mais alta vem primeiro.
+          Nesse caso, o h2 vem primeiro, depois o h3 e depois o h4 e assim por diante.
 
-            <h3 id="colorido1" class="titulo">Technology</h3>
-            <h2>What's New in 2022 tech</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihill At ea atque quidem </p>
-            <div class="card-footer">
-                <img src="./imagens/card-pequeno1.jpeg" alt="">
+          Uma sugestão é analisar se esse elemento faz sentido ser mesmo um h3, ele não tem sentido de ser um subtitulo.
+          Eu o colocaria como um "span" e colocaria o nome como nas documentações dos links acima. Exemplo:
+          <span class="chip chip-blue">Technology</span>
 
-                <div class="descricao">
+          Obs: Posso ter duas classes ou mais no mesmo elemento onde cada uma compõe um significado.
 
-                    <span>Jane Doce</span>
-                    <p>2h ogo</p>
-                </div>
-                
-            </div>
-           
+          No css ficaria assim:
+          .chip {
+            font-size: 10px;
+            padding: 3px;
+            width: 70px;
+            border-radius: 30px;
+            color: #ffffff;
+            text-align: center;
+            margin: 5px 0px 5px 10px;
+          }
+          .chip.chip-blue {
+            background-color: #4168e1;
+          }
+        -->
+        <h3 id="colorido1" class="titulo">Technology</h3>
+        <h2>What's New in 2022 tech</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          perferendis molestiae non nemo doloribus. Doloremque, nihill At ea
+          atque quidem
+        </p>
+        <div class="card-footer">
+          <!-- Faltou o texto alternativo para a imagem. Esse alt é importante para acessibilidade. -->
+          <img src="./imagens/card-pequeno1.jpeg" alt="" />
+
+          <div class="descricao">
+            <span>Jane Doce</span>
+            <!--
+              Um parágrafo tem semântica de textos longos e corridos, onde explicam algo como numa redação.
+              Usamos tags como span, strong, em, entre outras e depende da ocasião e semântica.
+              Nesse caso, usaria um simples span
+            -->
+            <p>2h ogo</p>
+          </div>
         </div>
+      </div>
 
-        <div class=" card card2">
-            <img src="./imagens/Comida.jpg" alt="Comida">
+      <!-- Daqui para baixo, segue o mesmo padrão. -->
 
-            <h3 id="colorido2" class="titulo" >Food</h3>
-            <h2>Delicious Food</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihill. At ea atque quidem! </p>
-            <div class="card-footer">
-                
-                <img src="./imagens/card-pequeno2.jpeg" alt="">
-                <div class="descricao">
+      <div class="card card2">
+        <img src="./imagens/Comida.jpg" alt="Comida" />
 
-                    <span>Jony Doce</span>
-                    <p>Yesturday</p>
-                </div>
-                
-            </div>
-
+        <h3 id="colorido2" class="titulo">Food</h3>
+        <h2>Delicious Food</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          perferendis molestiae non nemo doloribus. Doloremque, nihill. At ea
+          atque quidem!
+        </p>
+        <div class="card-footer">
+          <img src="./imagens/card-pequeno2.jpeg" alt="" />
+          <div class="descricao">
+            <span>Jony Doce</span>
+            <p>Yesturday</p>
+          </div>
         </div>
+      </div>
 
-        <div class=" card card3">
-
-            <img src="./imagens/Carro.jpg" alt="Carro">
-            <h3 id="colorido3" class="titulo">Automoble</h3>
-            <h2>Race To Your Heart Content</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi perferendis molestiae non nemo doloribus. Doloremque, nihill At ea atque quidem! </p>
-            <div class="card-footer">
-                
-                <img src="./imagens/card-pequeno3.jpeg" alt="">
-                <div class="descricao">
-
-                    <span>John Doce</span>
-                    <p>2h ogo</p>
-                </div>
-            </div>
-
+      <div class="card card3">
+        <img src="./imagens/Carro.jpg" alt="Carro" />
+        <h3 id="colorido3" class="titulo">Automoble</h3>
+        <h2>Race To Your Heart Content</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
+          perferendis molestiae non nemo doloribus. Doloremque, nihill At ea
+          atque quidem!
+        </p>
+        <div class="card-footer">
+          <img src="./imagens/card-pequeno3.jpeg" alt="" />
+          <div class="descricao">
+            <span>John Doce</span>
+            <p>2h ogo</p>
+          </div>
         </div>
-
-   </div>
-    
-</body>
+      </div>
+    </div>
+  </body>
 </html>
