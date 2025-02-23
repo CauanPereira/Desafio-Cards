@@ -3,13 +3,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    font-family: 'Poppins', sans-serif;
 }
 
 body{
-    background: linear-gradient(to right, #70e5ee, #4d92ec, #A18CD1);
 
+    background: linear-gradient(to right, #70e5ee, #4d92ec, #A18CD1);
+    font-family: 'Poppins', sans-serif;
 }
 
 
@@ -17,16 +16,17 @@ body{
 
     display: flex;
     justify-content: center; 
-      
 }
 
 .card{
 
+    display: flex;
+    flex-direction: column;
     margin-top: 50px;
     margin-right: 25px;
     background-color: #ffffff;
-    width: 285px;
-    height: 430px;
+    width: 293px;
+    height: 440px;
     border-radius: 10px;
     box-shadow: 1px 1px 1px rgba(0,0,0,0.3);
     position: relative;
@@ -35,7 +35,7 @@ body{
 .card-footer{
 
     display: flex;
-    position: absolute; left: 0px;bottom: 0px;
+    margin-top: auto;
     padding: 10px;
 }
 
@@ -45,22 +45,30 @@ body{
     height: 35px;
     border-radius: 100%;
     object-fit: cover;
+    margin-bottom: 5px;
+}
+.descricao{
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    line-height: 1;
+    position: relative;
+    top: 2px;
 }
 
-.descricao>span{
+.name{
 
-    font-size: 10pt;
+    font-size: 0.75rem;
     font-weight: bold;
-    margin-left: 3px;
+    margin-left: 5px;
 }
 
-.descricao>p{
+.date{
 
-    font-size: 9pt;
-    margin-top: -5px;
-    margin-bottom: 3px;
+    font-size: 0.7rem;
     color: #cecece;
-    margin-left: 3px;
+    margin-left: 5px;
 }
 
 .card>img{
@@ -73,21 +81,21 @@ body{
 
 .card>h2{
 
-    font-size: 15pt;
-    padding: 5px;
-    margin-left: 10px;
+    font-size: 21px;
+    margin-left: 13px;
+    margin-top: 5px;
 }
 
 .card>p{
-
-    padding: 5px;
-    margin-top: -9px;
-    font-size: 12px;
-    margin-left: 10px;
-    width: 270px;
+    
+    margin-top: 6px;
+    font-size: 12.5px;
+    margin-left: 13px;
+    width: 95%;
+    
 }   
 
-.titulo{
+.chip{
 
     font-size: 10px;
     padding: 3px;
@@ -95,25 +103,26 @@ body{
     border-radius: 30px;
     color: #ffffff;
     text-align: center;
-    margin: 5px 0px 5px 10px;
+    margin-left: 13px;
+    margin-top: 15px;
    
 }
 
-#colorido1{
+.chip.chip-blue{
 
-    background-color: #4168E1;
+    
+    background: linear-gradient(to top, #8fbef5, #207dff) ;
 }
 
-#colorido2{
+.chip.chip-yellow{
 
-    background-color: #EEAD2D;
+    
+    background: linear-gradient(to top, #f6da7e, #eead2d);
     width: 50px;
 }
 
-#colorido3{
+.chip.chip-red{
 
-    background-color: #FF0015;
+    
+    background: linear-gradient(to top, #ff8989, #ff0015);
 }
-
-
-
