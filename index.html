@@ -4,11 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Primeiro teste</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
@@ -16,74 +15,42 @@
       <div class="card">
         
         <img src="./images/technology.jpeg" alt="Tecnologia" />
-        <!-- 
-          "colorido1" não tem um nome intuitivo/semântico. Lembre do exemplo dos cards.
-          A título de informação, esse componente é comumente chamado de "chip ou badge".
-          Consulte nesses links: 
-          * https://www.syncfusion.com/angular-components/angular-chips
-          * https://getbootstrap.com/docs/5.3/components/badge/#background-colors
-
-          Outra coisa importante. Você inverteu a ordem dos headdings h2 e h3. Sempre a hierarquia mais alta vem primeiro.
-          Nesse caso, o h2 vem primeiro, depois o h3 e depois o h4 e assim por diante.
-
-          Uma sugestão é analisar se esse elemento faz sentido ser mesmo um h3, ele não tem sentido de ser um subtitulo.
-          Eu o colocaria como um "span" e colocaria o nome como nas documentações dos links acima. Exemplo:
-          <span class="chip chip-blue">Technology</span>
-
-          Obs: Posso ter duas classes ou mais no mesmo elemento onde cada uma compõe um significado.
-
-          No css ficaria assim:
-          .chip {
-            font-size: 10px;
-            padding: 3px;
-            width: 70px;
-            border-radius: 30px;
-            color: #ffffff;
-            text-align: center;
-            margin: 5px 0px 5px 10px;
-          }
-          .chip.chip-blue {
-            background-color: #4168e1;
-          }
-        -->
         <span class="chip chip-blue">Technology</span>
         <h2>What's New in 2022 tech</h2>
         <p>
+
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          perferendis molestiae non nemo doloribus. Doloremque, nihill At ea
+          perferendis molestiae non nemo doloribus. Doloremque, nihill At <br> ea
           atque quidem
         </p>
         <div class="card-footer">
-          <!-- Faltou o texto alternativo para a imagem. Esse alt é importante para acessibilidade. -->
+          
           <img src="./images/card-pequeno1.jpeg" alt="Jane Doce" />
 
           <div class="descricao">
+
             <span class="name">Jane Doce</span>
-            <!--
-              Um parágrafo tem semântica de textos longos e corridos, onde explicam algo como numa redação.
-              Usamos tags como span, strong, em, entre outras e depende da ocasião e semântica.
-              Nesse caso, usaria um simples span
-            -->
             <span class="date">2h ogo</span>
           </div>
         </div>
       </div>
 
-      <!-- Daqui para baixo, segue o mesmo padrão. -->
-
       <div class="card">
-        <img src="./images/food.jpg" alt="Comida" />
 
+        <img src="./images/food.jpg" alt="Comida"/>
         <span class="chip chip-yellow">Food</span>
         <h2>Delicious Food</h2>
         <p>
+
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          perferendis molestiae non nemo doloribus. Doloremque, nihill. At ea
+          perferendis molestiae non nemo doloribus. Doloremque, nihill. At <br> ea
           atque quidem!
         </p>
         <div class="card-footer">
+
           <img src="./images/card-pequeno2.jpeg" alt="Jony Doce" />
           <div class="descricao">
+
             <span class="name">Jony Doce</span>
             <span class="date">Yesturday</apan>
           </div>
@@ -91,17 +58,21 @@
       </div>
 
       <div class="card">
+      
         <img src="./images/car.jpg" alt="Carro" />
         <span class="chip chip-red">Automoble</span>
-        <h2>Race To Your Heart Content</h2>
+        <h2>Race To Your Heart <br> Content</h2>
         <p>
+
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
-          perferendis molestiae non nemo doloribus. Doloremque, nihill At ea
+          perferendis molestiae non nemo doloribus. Doloremque, nihill At <br> ea
           atque quidem!
         </p>
         <div class="card-footer">
+
           <img src="./images/card-pequeno3.jpeg" alt="Jonh Doce" />
           <div class="descricao">
+            
             <span class="name">John Doce</span>
             <span class="date">2h ogo</span>
           </div>
